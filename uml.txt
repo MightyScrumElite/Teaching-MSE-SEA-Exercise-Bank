@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+
+actor "Unregistered Customer" as unreg
+actor "Free Customer" as free
+actor "Premium Customer" as prem
+actor expert
+actor bank
+actor "Marketing Manager" as manager
+rectangle "system" {
+unreg -- (register)
+unreg -- (access)
+unreg -- (monitor)
+(manage) .> (register) : include
+(web) --|> (access)
+(app) --|> (access)
+free -- (register)
+free -- (access)
+prem -- (access)
+(subscription) .> (register) : include
+(monitor) .> (register) : include
+expert -- (monitor)
+bank -- (monitor)
+(recommandation) .> (register) : include
+(follow advice) .> (recommandation) : include
+(ignore advice) .> (recommandation) : include
+bank -- (follow advice)
+bank -- (ignore advice)
+(discuss) -- prem
+(discuss) -- expert
+(analyse) -- manager 
+
+(register)-[hidden]-(access)
+(register)-[hidden]-(manage)
+(monitor)-[hidden]-(manage)
+(web)-[hidden]-(app)
+(recommandation)-[hidden]-(discuss)
+(analyse)-[hidden]-(follow advice)
+(analyse)-[hidden]-(ignore advice)
+}
+@enduml
