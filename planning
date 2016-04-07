@@ -1,0 +1,17 @@
+We are going to use a scrum methodology to develop The service.
+
+The team is build from 1 project manager, 3 front-end developper, 2 back-end developper and 1 mobile developper. 
+
+The following activites need to be done :
+
+  - Planning
+  - Specifications
+  - Conception
+  - Implementation
+  - Testing
+
+The alpha version will be release in 6 months.
+The beta version for external user will be release in 8 monthts.
+
+We are going to use Git to keep track of the progress. A bug bounty programm will be create to enhanced the security. 
+
